@@ -3,11 +3,11 @@
 ## Getting started
 
 To get started with the app, clone the repo and then install the needed gems:
-Note: you will need to install postgresql as well as the heroku cli before running 'bundle install'
 
 ```
 $ bundle install
 ```
+(Note: you will need to install postgresql as well as the heroku cli before running 'bundle install')
 
 Next, migrate the database:
 
