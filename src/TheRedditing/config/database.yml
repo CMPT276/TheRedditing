@@ -24,9 +24,9 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: TheReditting_development
+  database: thereditting_development
   pool: 5
-  username: whosford
+  username: hosfo
   password: database1
 
   # The specified database role being used to connect to postgres.
@@ -62,9 +62,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: TheReditting_test
+  database: thereditting_test
   pool: 5
-  username: whosford
+  username: hosfo
   password: database1
 
 # As with config/secrets.yml, you never want to store sensitive information,
