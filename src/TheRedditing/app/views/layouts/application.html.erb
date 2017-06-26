@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title><%= full_title(yield(:title)) %></title>
 	<%= csrf_meta_tags %>
@@ -8,11 +9,12 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
+<body id="main">
+
 	<%= render 'layouts/header' %>
 	<div class="container">
 		<% flash.each do |message_type, message| %>
-        	<div class="alert alert-<%= message_type %>"><%= message %></div>
+        	<div class="alert alert-<%= message_type %>" ><%= message %></div>
       	<% end %>
 		<%= yield %>
 		<%= render 'layouts/footer' %>
@@ -21,4 +23,17 @@
 		-->
 	</div>
 </body>
+	<div style="text-align: center;">
+	   <%= link_to image_tag("aliens/dishonored.png") %>
+		 <%= link_to image_tag("aliens/skyrim.png") %>
+	   <%= link_to image_tag("aliens/r&m.png") %>
+	   <%= link_to image_tag("aliens/food.png") %>
+	   <%= link_to image_tag("aliens/TES.png") %>
+	   <%= link_to image_tag("aliens/wtf.png") %>
+	   <%= link_to image_tag("aliens/necromancer.png") %>
+	   <%= link_to image_tag("aliens/movies.png") %>
+	   <%= link_to image_tag("aliens/tech.png") %>
+	   <%= link_to image_tag("aliens/theoriginals.png") %>
+	</div>
+
 </html>

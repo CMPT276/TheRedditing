@@ -3,8 +3,16 @@
 
 /* universal */
 
+#sidenav {
+  left: 45px;
+}
+
+.container{
+  background-color: lightgrey;
+}
+
 body {
-  padding-top: 60px;
+  background-image: url("appbg.png");
 }
 
 section {
@@ -21,8 +29,54 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
+  font-color: lightgrey;
 }
 
+/* The side navigation menu */
+.sidenav {
+    height: 100%; //height of the side nav bar
+    width: 0; //default width is 0 because you want the sidebar hidden when you first load the page
+    position: fixed; //sidebar stays in place
+    z-index: 1; //fix to top
+    top: 0;
+    left: 0;
+    background-image: url("sidebar-bg.jpg");
+    background-size: cover;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 100px;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav a {
+    padding: 50px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: lightgrey;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: lightblue;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,6 +85,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
+  font-family: Courier;
+  font-weight: bold;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -42,7 +98,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: black;
 }
 
 p {
@@ -63,25 +119,26 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
+  color: lightblue;
   text-decoration: none;
 }
+
 
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
+  border-top: 1px solid black;
+  margin-top: 100px;
+  color: black;
 }
 
 footer a {
-  color: #555;
+  color: black;
 }
 
 footer a:hover {
-  color: #222;
+  color: red;
+  transition: 0.3s;
 }
 
 footer small {
@@ -209,4 +266,3 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
-
