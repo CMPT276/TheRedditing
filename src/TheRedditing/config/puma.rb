@@ -1,6 +1,6 @@
 # If running on windows comment out the following line, server cannot be started in worker mode.
 # For linux users, the following line should not be commented out
-workers Integer(ENV['WEB_CONCURRENCY'] || 2)
+#workers Integer(ENV['WEB_CONCURRENCY'] || 2)
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
