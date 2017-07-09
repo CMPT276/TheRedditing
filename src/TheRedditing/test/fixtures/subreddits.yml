@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  subreddit1: MyString
+  subreddit2: MyString
+  subreddit3: MyString
+  subreddit4: MyString
+  subreddit5: MyString
+  active: false
+
+two:
+  title: MyString
+  subreddit1: MyString
+  subreddit2: MyString
+  subreddit3: MyString
+  subreddit4: MyString
+  subreddit5: MyString
+  active: false
