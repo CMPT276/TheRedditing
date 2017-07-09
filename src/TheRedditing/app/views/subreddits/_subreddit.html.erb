@@ -1,7 +1,12 @@
 <!-- This page is under TODO at the moment. -->
 
-<div class="col-sm-11 col-xs-12 blog-content">
-  <h2 class="text-center"><%= @subreddit.title %></h2>
-  <h5 class="text-center"><%= @subreddit.created_at.strftime('%b %d, %Y') %></h5>
-  <div><%= raw @subreddit.subreddit1 %></div>
+<div class="media">
+  <div class="media-left media-middle">
+    <%= image_tag("aliens/tech.png") %>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%= subreddit.title %></h4>
+    <p>Thread 1 Subreddit</p>
+    <p>Thread 1 Description</p>
+  </div>
 </div>
