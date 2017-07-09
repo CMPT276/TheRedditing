@@ -24,10 +24,10 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: thereditting_development
+  database: theredditing_development
   pool: 5
-  username: hosfo
-  password: database1
+  username: Kade
+  password: 2405
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -62,10 +62,10 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: thereditting_test
+  database: theredditing_test
   pool: 5
-  username: hosfo
-  password: database1
+  username: Kade
+  password: 2405
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
