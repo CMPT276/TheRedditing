@@ -1,7 +1,32 @@
-<% provide(:title, 'All subreddits') %>
-<h1>All subreddits</h1>
+<style>
 
-<div class="container">
- 	<%= render @subreddits %>
-  </div>
+#bannerImg {
+  width: 100%;
+  background-image: url("/assets/sidebar-bg.jpg");
+  height: 100px;
+  background-color: purple;
+  background-position: fill;
+  background-size: cover;
+  padding-top: 0px;
+  color: lightblue;
+}
+
+.container{
+  background-color: black;
+  color: white;
+}
+
+#subredditLogo {
+  width: 10%;
+  height: auto;
+}
+
+</style>
+<div id = "bannerImg" >
+  <h1>
+    <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
+    <u>S U B R E D D I T S</u>
+    <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
+  </h1>
 </div>
+ 	<%= render @subreddits %>

@@ -42,21 +42,6 @@ textarea {
     padding-top: 75px;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 
-    .dropdown-menu {
-      background-color: #222222;
-      border-radius: 0;
-      border: none;
-      box-shadow: none;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      width: 100%;
-  }
-
-}
-
-.dropdown {
-  color: lightgrey;
 }
 
 .sidenav a {

@@ -2,6 +2,7 @@
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   	<li><%= link_to "<span class=\"glyphicon glyphicon-home\"></span> Home".html_safe, root_path %></li>
 	<% if logged_in? %>
+    <li><%= link_to "<span class=\"glyphicon glyphicon-list-alt\"></span> Subreddits".html_safe, subreddits_path %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-user\"></span> Profile".html_safe, current_user %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-book\"></span> Preferences".html_safe, preference_path %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-cog\"></span> Settings".html_safe, edit_user_path(current_user) %></li>
@@ -15,12 +16,11 @@
 		<li><%= link_to "<span class=\"glyphicon glyphicon-log-out\"></span> Log out".html_safe, logout_path, method: :delete %></li>
 	<% else %>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-log-in\"></span> Login".html_safe, login_path %></li>
-	<% end %>	
+	<% end %>
 </div>
 
 <!-- Use any element to open the sidenav -->
-<span onclick="openNav()" class="glyphicon glyphicon-list" style="font-size:50px; cursor:pointer; color: lightgrey" id = "sidenav" >
-INDEX
+<span onclick="openNav()" class="glyphicon glyphicon-list" style="font-size:50px; cursor:pointer; color: lightgrey" id = "sidenav">
 </span>
 
 <script>
