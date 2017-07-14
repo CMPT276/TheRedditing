@@ -10,22 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170709203414) do
+ActiveRecord::Schema.define(version: 20170714064722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "subreddits", force: :cascade do |t|
-    t.string "title"
-    t.string "subreddit1"
-    t.string "subreddit2"
-    t.string "subreddit3"
-    t.string "subreddit4"
-    t.string "subreddit5"
+    t.string "subreddit"
+    t.string "category"
     t.boolean "active", default: false, null: false
     t.boolean "completed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "subreddits_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "subreddit_id", null: false
+    t.index ["user_id", "subreddit_id"], name: "index_subreddits_users_on_user_id_and_subreddit_id"
   end
 
   create_table "users", force: :cascade do |t|

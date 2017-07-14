@@ -10,11 +10,11 @@
 			<li><%= link_to "<span class=\"glyphicon glyphicon-list-alt\"></span> Users".html_safe, users_path %></li>
 		<% end %>
 	<% end %>
-	<li><%= link_to "<span class=\"glyphicon glyphicon-info-sign\"></span> About".html_safe, about_path %></li>
-	<li><%= link_to "<span class=\"glyphicon glyphicon-question-sign\"></span> FAQ".html_safe, faq_path %></li>
 	<% if logged_in? %>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-log-out\"></span> Log out".html_safe, logout_path, method: :delete %></li>
 	<% else %>
+		<li><%= link_to "<span class=\"glyphicon glyphicon-info-sign\"></span> About".html_safe, about_path %></li>
+		<li><%= link_to "<span class=\"glyphicon glyphicon-question-sign\"></span> FAQ".html_safe, faq_path %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-log-in\"></span> Login".html_safe, login_path %></li>
 	<% end %>
 </div>

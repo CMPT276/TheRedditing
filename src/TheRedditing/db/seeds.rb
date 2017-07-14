@@ -47,42 +47,102 @@ User.create!(name:  "Daniel Peng",
              activated: true,
              activated_at: Time.zone.now)
 
-Subreddit.create!(title:  "Sports",
-             subreddit1: "/r/soccer",
-             subreddit2: "/r/hockey",
-             subreddit3: "/r/nfl",
-             subreddit4: "/r/baseball",
-             subreddit5: "/r/MMA",
+Subreddit.create!(subreddit:  "/r/soccer",
+             category: "Sports",
              active: true)
 
-Subreddit.create!(title:  "Science",
-             subreddit1: "/r/science",
-             subreddit2: "/r/technology",
-             subreddit3: "/r/futurology",
-             subreddit4: "/r/AskScience",
-             subreddit5: "/r/math",
+Subreddit.create!(subreddit:  "/r/nfl",
+             category: "Sports",
              active: true)
 
-Subreddit.create!(title:  "Gaming",
-             subreddit1: "/r/leagueoflegends",
-             subreddit2: "/r/Overwatch",
-             subreddit3: "/r/gaming",
-             subreddit4: "/r/GlobalOffensive",
-             subreddit5: "/r/hearthstone",
+Subreddit.create!(subreddit:  "/r/hockey",
+             category: "Sports",
              active: true)
 
-Subreddit.create!(title:  "News",
-             subreddit1: "/r/news",
-             subreddit2: "/r/politics",
-             subreddit3: "/r/worldnews",
-             subreddit4: "/r/nottheonion",
-             subreddit5: "/r/canada",
+Subreddit.create!(subreddit:  "/r/baseball",
+             category: "Sports",
              active: true)
 
-Subreddit.create!(title:  "Movies",
-             subreddit1: "/r/movies",
-             subreddit2: "/r/moviedetails",
-             subreddit3: "/r/documentaries",
-             subreddit4: "/r/classicfilms",
-             subreddit5: "/r/horror",
+Subreddit.create!(subreddit:  "/r/nba",
+             category: "Sports",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/science",
+             category: "Science",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/technology",
+             category: "Science",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/futurology",
+             category: "Science",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/AskScience",
+             category: "Science",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/math",
+             category: "Science",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/leagueoflegends",
+             category: "Gaming",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/Overwatch",
+             category: "Gaming",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/gaming",
+             category: "Gaming",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/GlobalOffensive",
+             category: "Gaming",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/hearthstone",
+             category: "Gaming",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/news",
+             category: "News",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/politics",
+             category: "News",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/worldnews",
+             category: "News",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/nottheonion",
+             category: "News",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/canada",
+             category: "News",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/movies",
+             category: "Movies",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/moviedetails",
+             category: "Movies",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/documentaries",
+             category: "Movies",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/classicfilms",
+             category: "Movies",
+             active: true)
+
+Subreddit.create!(subreddit:  "/r/horror",
+             category: "Movies",
              active: true)

@@ -49,7 +49,7 @@ class SubredditsController < ApplicationController
 
   private
     def subreddit_params
-      params.require(:subreddit).permit(:title, :subreddit1, :subreddit2, :subreddit3, :subreddit4, :subreddit5, :active)
+      params.require(:subreddit).permit(:subreddit, :category, :active)
     end
 
     def find_subreddit
