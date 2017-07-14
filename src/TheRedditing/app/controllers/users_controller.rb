@@ -41,6 +41,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def set_preferences
+    @user = current_user
+  end
+
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  get    '/preference',   to: 'preferences#new'
+  get    '/preference',   to: 'users#set_preferences'
   resources :users
   resources :subreddits
   resources :account_activations, only: [:edit]
