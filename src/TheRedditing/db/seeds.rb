@@ -7,45 +7,45 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create!(name:  "Will Hosford",
-             email: "hosford.will@gmail.com",
-             password:              "theredditingAdmin",
-             password_confirmation: "theredditingAdmin",
-             admin:     true,
-             activated: true,
-             activated_at: Time.zone.now)
+# User.create!(name:  "Will Hosford",
+#              email: "hosford.will@gmail.com",
+#              password:              "theredditingAdmin",
+#              password_confirmation: "theredditingAdmin",
+#              admin:     true,
+#              activated: true,
+#              activated_at: Time.zone.now)
 
-User.create!(name:  "Henry Chang",
-             email: "hchang1994@hotmail.com",
-             password:              "theredditingAdmin",
-             password_confirmation: "theredditingAdmin",
-             admin:     true,
-             activated: true,
-             activated_at: Time.zone.now)
+# User.create!(name:  "Henry Chang",
+#              email: "hchang1994@hotmail.com",
+#              password:              "theredditingAdmin",
+#              password_confirmation: "theredditingAdmin",
+#              admin:     true,
+#              activated: true,
+#              activated_at: Time.zone.now)
 
-User.create!(name:  "Martin Minkov",
-             email: "minkovlmartin@gmail.com",
-             password:              "theredditingAdmin",
-             password_confirmation: "theredditingAdmin",
-             admin:     true,
-             activated: true,
-             activated_at: Time.zone.now)
+# User.create!(name:  "Martin Minkov",
+#              email: "minkovlmartin@gmail.com",
+#              password:              "theredditingAdmin",
+#              password_confirmation: "theredditingAdmin",
+#              admin:     true,
+#              activated: true,
+#              activated_at: Time.zone.now)
 
-User.create!(name:  "Kade Chen",
-             email: "kade_chen@hotmail.com",
-             password:              "theredditingAdmin",
-             password_confirmation: "theredditingAdmin",
-             admin:     true,
-             activated: true,
-             activated_at: Time.zone.now)
+# User.create!(name:  "Kade Chen",
+#              email: "kade_chen@hotmail.com",
+#              password:              "theredditingAdmin",
+#              password_confirmation: "theredditingAdmin",
+#              admin:     true,
+#              activated: true,
+#              activated_at: Time.zone.now)
 
-User.create!(name:  "Daniel Peng",
-             email: "danielpeng@live.cn",
-             password:              "theredditingAdmin",
-             password_confirmation: "theredditingAdmin",
-             admin:     true,
-             activated: true,
-             activated_at: Time.zone.now)
+# User.create!(name:  "Daniel Peng",
+#              email: "danielpeng@live.cn",
+#              password:              "theredditingAdmin",
+#              password_confirmation: "theredditingAdmin",
+#              admin:     true,
+#              activated: true,
+#              activated_at: Time.zone.now)
 
 Subreddit.create!(subreddit:  "/r/soccer",
              category: "Sports",
