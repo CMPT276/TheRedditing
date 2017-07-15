@@ -44,11 +44,6 @@ class User < ApplicationRecord
 		update_columns(activated: true, activated_at: Time.zone.now)
 	end
 
-	# Sets preferences_selected to true
-	def set_preferences
-		update_columns(preferences_selected: true)
-	end
-
 	# Sends activation email.
 	def send_activation_email
 		UserMailer.account_activation(self).deliver_now
