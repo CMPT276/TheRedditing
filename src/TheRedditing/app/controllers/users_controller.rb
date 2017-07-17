@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
     if @user.activated?
-      redirect_to subreddits_path
+      redirect_to preference_path
     else
       redirect_to root_url
     end
