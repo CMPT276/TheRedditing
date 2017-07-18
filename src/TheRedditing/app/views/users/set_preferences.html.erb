@@ -13,7 +13,7 @@
                 </div>
                 <div id="collapse<%= index.to_s %>" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <%= f.collection_check_boxes :subreddit_ids, Subreddit.where(category: s), :id, :subreddit, class: "checkbox inline" do |b| %>
+                        <%= f.collection_check_boxes :subreddit_ids, Subreddit.where(category: s), :id, :subreddit do |b| %>
                             <div class="collection-check-box">
                                 <%= b.check_box %>
                                 <%= b.label %>
@@ -30,3 +30,9 @@
        <% end %>
    </div>
 </div>
+
+<style>
+label {
+  display: initial;
+}
+</style>
