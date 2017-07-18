@@ -1,9 +1,10 @@
 <div id="mySidenav" class="sidenav">
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <h1 class="sidebar-brand"><u>Menu</u></h1>
+
   	<li><%= link_to "<span class=\"glyphicon glyphicon-home\"></span> Home".html_safe, root_path %></li>
 	<% if logged_in? %>
     <li><%= link_to "<span class=\"glyphicon glyphicon-list-alt\"></span> Subreddits".html_safe, current_user %></li>
-
 		<li><%= link_to "<span class=\"glyphicon glyphicon-book\"></span> Preferences".html_safe, preference_path %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-cog\"></span> Settings".html_safe, edit_user_path(current_user) %></li>
 		<% if current_user.admin?%>
@@ -17,6 +18,7 @@
 		<li><%= link_to "<span class=\"glyphicon glyphicon-question-sign\"></span> FAQ".html_safe, faq_path %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-log-in\"></span> Login".html_safe, login_path %></li>
 	<% end %>
+
 </div>
 
 <!-- Use any element to open the sidenav -->
@@ -25,8 +27,8 @@
 
 <script>
 function openNav() {
-    document.getElementById("mySidenav").style.width = "200px";
-    document.getElementById("main").style.marginLeft = "200px";
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
 }
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
