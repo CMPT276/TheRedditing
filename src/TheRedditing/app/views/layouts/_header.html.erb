@@ -2,8 +2,8 @@
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   	<li><%= link_to "<span class=\"glyphicon glyphicon-home\"></span> Home".html_safe, root_path %></li>
 	<% if logged_in? %>
-    <li><%= link_to "<span class=\"glyphicon glyphicon-list-alt\"></span> Subreddits".html_safe, subreddits_path %></li>
-		<li><%= link_to "<span class=\"glyphicon glyphicon-user\"></span> Profile".html_safe, current_user %></li>
+    <li><%= link_to "<span class=\"glyphicon glyphicon-list-alt\"></span> Subreddits".html_safe, current_user %></li>
+
 		<li><%= link_to "<span class=\"glyphicon glyphicon-book\"></span> Preferences".html_safe, preference_path %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-cog\"></span> Settings".html_safe, edit_user_path(current_user) %></li>
 		<% if current_user.admin?%>

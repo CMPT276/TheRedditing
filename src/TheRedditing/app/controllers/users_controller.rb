@@ -9,11 +9,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-    if @user.activated?
-      redirect_to subreddits_path
-    else
-      redirect_to root_url
-    end
+    redirect_to root_url and return unless @user.activated?
 	end
 
 	def new

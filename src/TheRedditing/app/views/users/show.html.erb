@@ -1,11 +1,55 @@
-<% provide(:title, @user.name) %>
-<div class="row">
-	<aside class="col-md-4">
-		<section class="user_info">
-			<h1>
-				<%= gravatar_for @user %>
-				<%= @user.name %>
-			</h1>
-		</section>
-	</aside>
+<% provide(:title, 'Subreddits') %>
+<div id = "bannerImg" >
+  <h1>
+    <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
+    <u>S U B R E D D I T S</u>
+    <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
+  </h1>
 </div>
+<% @user.subreddits.distinct.pluck(:category).each do |c| %>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><%= c %> |</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Top Threads"%></li>
+      <li><%= link_to "Hottest Threads"%></a></li>
+      <li><%= link_to "Top Comments"%></li>
+      <li><%= link_to "Hottest Comments"%></a></li>
+    </ul>
+  </div>
+  </nav>
+  <% @user.subreddits.where(category: c).pluck(:subreddit).each do |s| %>
+	  <div class="media">
+	  <div class="media-left media-middle">
+	    <%= image_tag("aliens/tech.png") %>
+	  </div>
+	  <div class="media-body">
+	    <p><%= s %></p>
+	    <p>Thread Description</p>
+	  </div>
+	  </div>
+  <% end %>
+<% end %>
+
+<style>
+#bannerImg {
+  width: 100%;
+  background-image: url("/assets/sidebar-bg.jpg");
+  height: 100px;
+  background-color: purple;
+  background-position: fill;
+  background-size: cover;
+  padding-top: 0px;
+  color: lightblue;
+}
+.container{
+  background-color: black;
+  color: white;
+}
+#subredditLogo {
+  width: 10%;
+  height: auto;
+}
+</style>
