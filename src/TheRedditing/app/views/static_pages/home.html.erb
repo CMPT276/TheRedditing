@@ -1,19 +1,267 @@
+
+<div class="slideShow-container">
+
+  <div class="mySlides fade">
+    <%= image_tag("slideShow/slide1.jpg", :id=>"slideImg1", :class=>"slideImg") %>
+    <div id="slideTxt1" class="text">
+      <h1>The Redditing</h1>
+
+      <h2>
+          <b>The place where all of your favorite subreddits will be
+          presented to you to make it that much easier to procrastinate
+          and waste time.</b>
+      </h2>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <%= image_tag("slideShow/slide2.png", :id=>"slideImg2", :class=>"slideImg") %>
+    <div id="slideTxt2" class="text">
+        <h1>
+          Optimize Your Redditing Experience
+        </h1>
+
+        <h2>
+          <b>Set your subreddit preferences and be up to date with
+          the latest subreddit news</b>
+        </h2>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <%= image_tag("slideShow/slide3.png", :id=>"slideImg3", :class=>"slideImg") %>
+    <div id="slideTxt3" class="text">
+      <h1>
+        Introducing Brand New UI
+      </h1>
+
+    <h2>
+      <b>Accessing your favorite subreddits has never been easier</b>
+    </h2>
+
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <%= image_tag("slideShow/slide1.jpg", :id=>"slideImg4", :class=>"slideImg") %>
+    <div id="slideTxt4" class="text">
+        <h1>
+          Sign Up Now For Free
+        </h1>
+
+        <%= image_tag("slideShow/slide4.png", :class=>"arrow") %>
+    </div>
+  </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<br>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<br>
+
+<center>
+<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<br>
+<br>
+<%= link_to image_tag("reddit-logo.png") %>
+</center>
+
 <style>
-.jumbotron{
-  background-color: lightgrey;
-  width: 100%;
+
+.container {
+  background-color: black;
 }
+
+.arrow {
+  width: auto;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Slideshow container */
+.slideShow-container {
+  position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+/*Slideshow Images*/
+
+.slideImg {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+#slideImg3 {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  width: auto;
+  margin-top: -22px;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  font-size: 50px;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  border-radius: 3px 0 0 3px;
+  right: 0px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: orange;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+#slideTxt1 h1{
+    font-size: 90px;
+    color: lightgrey;
+}
+
+#slideTxt1 h2 {
+  font-size: 25px;
+  color: lightblue;
+  font-family: monospace;
+}
+
+#slideTxt2 {
+  top: 60%;
+}
+
+#slideTxt2 h1 {
+  font-size: 75px;
+  color: lightgrey;
+}
+
+#slideTxt2 h2 {
+  font-size: 25px;
+  color: lightblue;
+  font-family: monospace;
+}
+
+#slideTxt3 {
+  top: 40%;
+}
+
+#slideTxt3 h1 {
+  font-size: 75px;
+  color: orange;
+}
+
+#slideTxt3 h2 {
+  font-size: 25px;
+  color: lightblue;
+  font-family: monospace;
+}
+
+#slideTxt4 h1 {
+  font-size: 75px;
+  color: lightgrey;
+}
+
+
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
 </style>
 
-<div class="center jumbotron">
-  <h1>The Redditing<h1>
 
-  <h2>
-    The place where all of your favorite subreddits will be presented to you to make it that much easier to procrastinate and waste time.
-  </h2>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  <br>
-  <br>
-  <%= link_to image_tag("reddit-logo.png") %>
-</div>
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>

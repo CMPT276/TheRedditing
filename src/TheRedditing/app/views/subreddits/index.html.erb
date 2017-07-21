@@ -1,7 +1,7 @@
 <style>
 #bannerImg {
   width: 100%;
-  background-image: url("/assets/sidebar-bg.jpg");
+  background-image: url("/assets/images/sidebar/sidebar-bg.jpg");
   height: 100px;
   background-color: purple;
   background-position: fill;
@@ -9,6 +9,7 @@
   padding-top: 0px;
   color: lightblue;
 }
+
 .container{
   background-color: black;
   color: white;
@@ -17,14 +18,19 @@
   width: 10%;
   height: auto;
 }
+
+
 </style>
+
+
 <div id = "bannerImg" >
   <h1>
-    <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
+    <img src = "subreddit-logo.png" id = "subredditLogo">
     <u>S U B R E D D I T S</u>
-    <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
+    <img src = "subreddit-logo.png" id = "subredditLogo">
   </h1>
 </div>
+
 <% Subreddit.distinct.pluck(:category).each do |s| %>
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -49,4 +55,5 @@
     <p>Thread Description</p>
   </div>
   </div>
+
 <% end %>

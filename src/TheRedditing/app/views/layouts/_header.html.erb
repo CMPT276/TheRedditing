@@ -1,6 +1,9 @@
 <div id="mySidenav" class="sidenav">
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <h1 class="sidebar-brand"><u>Menu</u></h1>
+
+  <div id="sidebar-img">
+    <%= link_to image_tag("sidebar/sidebar-logo.png"), root_path %>
+  </div>
 
   	<li><%= link_to "<span class=\"glyphicon glyphicon-home\"></span> Home".html_safe, root_path %></li>
 	<% if logged_in? %>
@@ -22,16 +25,18 @@
 </div>
 
 <!-- Use any element to open the sidenav -->
-<span onclick="openNav()" class="glyphicon glyphicon-list" style="font-size:50px; cursor:pointer; color: lightgrey" id = "sidenav">
+<span id="openBtn" onclick="openNav()" class="glyphicon glyphicon-list" style="font-size:50px; cursor:pointer; color: lightgrey" id = "sidenav">
 </span>
 
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    openBtn.style.visibility = "hidden";
 }
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
+    openBtn.style.visibility = "visible";
 }
 </script>
