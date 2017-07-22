@@ -24,9 +24,35 @@
 
 </div>
 
+<div id="banner1">
+  <span id="openBtn" onclick="openNav()" class="glyphicon glyphicon-list" style="font-size:50px; cursor:pointer; color: orange;" id = "sidenav">
+  </span>
+
+  <%= link_to image_tag("aliens/dishonored.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/skyrim.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/ironman.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/r&m.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/food.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/TES.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/wtf.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/necromancer.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/movies.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/tech.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/theoriginals.png", :id=>"bannerImg") %>
+</div>
+
 <!-- Use any element to open the sidenav -->
-<span id="openBtn" onclick="openNav()" class="glyphicon glyphicon-list" style="font-size:50px; cursor:pointer; color: lightgrey" id = "sidenav">
-</span>
+
+<style>
+
+#openBtn {
+  float: left;
+}
+
+#banner1 {
+  text-align: center;
+}
+</style>
 
 <script>
 function openNav() {

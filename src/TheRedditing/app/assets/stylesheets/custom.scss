@@ -34,7 +34,7 @@ textarea {
 .sidenav {
     height: 100%; //height of the side nav bar
     width: 0; //default width is 0 because you want the sidebar hidden when you first load the page
-    position: fixed; //sidebar stays in place
+    position: absolute; //sidebar stays in place
     z-index: 1; //fix to top
     top: 0;
     left: 0;
@@ -68,7 +68,6 @@ textarea {
     font-size: 36px !important;
     margin-left: 50px;
 }
-
 
 #main {
     transition: margin-left .5s;
@@ -129,13 +128,12 @@ p {
 /* footer */
 
 footer {
-  border-top: 1px solid black;
   margin-top: 100px;
-  color: black;
+  color: lightgrey;
 }
 
 footer a {
-  color: black;
+  color: lightgrey;
 }
 
 footer a:hover {
