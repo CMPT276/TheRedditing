@@ -1,3 +1,5 @@
+require 'SubredditPost'
+
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
@@ -9,6 +11,8 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+    @subredditPost = SubredditPost.getTopPosts(@user.subreddits.pluck(:subreddit))
+
     redirect_to root_url and return unless @user.activated?
 	end
 
