@@ -1,6 +1,9 @@
 <div id="mySidenav" class="sidenav">
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <h1 class="sidebar-brand"><u>Menu</u></h1>
+
+  <div id="sidebar-img">
+    <%= link_to image_tag("sidebar/sidebar-logo.png"), root_path %>
+  </div>
 
   	<li><%= link_to "<span class=\"glyphicon glyphicon-home\"></span> Home".html_safe, root_path %></li>
 	<% if logged_in? %>
@@ -21,17 +24,45 @@
 
 </div>
 
+<div id="banner1">
+  <span id="openBtn" onclick="openNav()" class="glyphicon glyphicon-list" style="font-size:50px; cursor:pointer; color: orange;" id = "sidenav">
+  </span>
+
+  <%= link_to image_tag("aliens/dishonored.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/skyrim.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/ironman.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/r&m.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/food.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/TES.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/wtf.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/necromancer.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/movies.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/tech.png", :id=>"bannerImg") %>
+  <%= link_to image_tag("aliens/theoriginals.png", :id=>"bannerImg") %>
+</div>
+
 <!-- Use any element to open the sidenav -->
-<span onclick="openNav()" class="glyphicon glyphicon-list" style="font-size:50px; cursor:pointer; color: lightgrey" id = "sidenav">
-</span>
+
+<style>
+
+#openBtn {
+  float: left;
+}
+
+#banner1 {
+  text-align: center;
+}
+</style>
 
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    openBtn.style.visibility = "hidden";
 }
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
+    openBtn.style.visibility = "visible";
 }
 </script>

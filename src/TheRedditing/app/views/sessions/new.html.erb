@@ -20,6 +20,55 @@
 				<%= f.submit "Log in", class: "btn btn-primary" %>
 				<p style="text-align:center">New user? <%= link_to "Sign up now!", signup_path %></p>
 			</div>
-		<% end %>	
+		<% end %>
 	</div>
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<style>
+.container {
+  color: black;
+  background-image: url(<%= asset_path 'preferences-bg.jpg' %>);
+  background-size: cover;
+}
+
+
+footer {
+  margin-top: 100px;
+  color: black;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+hr {
+  border-color: black;
+}
+
+</style>
