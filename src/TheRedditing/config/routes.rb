@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get    '/preference',   to: 'users#set_preferences'
+  get    '/users/:id/showHotPosts', to: 'users#showHotPosts'
+    get    '/users/:id/showTopPosts', to: 'users#showTopPosts'
+
   resources :users
   resources :subreddits
   resources :account_activations, only: [:edit]

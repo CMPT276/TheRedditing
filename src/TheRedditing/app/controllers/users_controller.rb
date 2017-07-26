@@ -16,11 +16,16 @@ class UsersController < ApplicationController
 	end
 
   def showTopPosts
+     @user = User.find(params[:id])
      @subredditPost = SubredditPost.getTopPosts(@user.subreddits.pluck(:subreddit))
+     render 'show'
+
   end
 
   def showHotPosts
+     @user = User.find(params[:id])
      @subredditPost = SubredditPost.getHotPosts(@user.subreddits.pluck(:subreddit))
+     render 'show'
   end
 
 	def new
