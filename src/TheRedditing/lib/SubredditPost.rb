@@ -26,13 +26,10 @@ class SubredditPost
 
 			end
 		end
-		#pp @subredditStructure
 	end
 
 	def self.getTopPosts(subreddits)
 		response = []
-		pp subreddits
-		#pp categories
 		for subreddit in subreddits
 			response.push(get("#{subreddit}/top/.json", headers: {"User-Agent" => APPLICATION_NAME}))
 		end
@@ -42,8 +39,16 @@ class SubredditPost
 			raise response.response
 		end
 	end
+
+	def self.getHotPosts(subreddits)
+		response = []
+		for subreddit in subreddits
+			response.push(get("#{subreddit}/hot/.json", headers: {"User-Agent" => APPLICATION_NAME}))
+		end
+		if response.any?
+			new(response)
+		else
+			raise response.response
+		end
+	end
 end
-
-
-#subreddit = Subreddit.getTopPosts('overwatch')
-#puts subreddit.inspect

@@ -12,9 +12,16 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
     @subredditPost = SubredditPost.getTopPosts(@user.subreddits.pluck(:subreddit))
-
     redirect_to root_url and return unless @user.activated?
 	end
+
+  def showTopPosts
+     @subredditPost = SubredditPost.getTopPosts(@user.subreddits.pluck(:subreddit))
+  end
+
+  def showHotPosts
+     @subredditPost = SubredditPost.getHotPosts(@user.subreddits.pluck(:subreddit))
+  end
 
 	def new
 		@user = User.new

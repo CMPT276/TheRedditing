@@ -6,12 +6,8 @@
     <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
   </h1>
 </div>
-<% @user.subreddits.distinct.pluck(:category).each do |c| %>
-  <nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><%= c %> |</a>
-    </div>
     <ul class="nav navbar-nav">
       <li><%= link_to "Top Threads"%></li>
       <li><%= link_to "Hottest Threads"%></a></li>
@@ -19,32 +15,8 @@
       <li><%= link_to "Hottest Comments"%></a></li>
     </ul>
   </div>
-  </nav>
-  <% @user.subreddits.where(category: c).pluck(:subreddit).each do |s| %>
-	  <div class="media">
-	  <div class="media-body">
-	    <% @subredditPost.subredditStructure.each do | key, post | %>
-        <% if s.include? post[1] %>
-          <div>
-            <p><%= link_to post[0], "https://www.reddit.com" + post[3] %></p>
-            <p><%= link_to post[1], "https://reddit.com/r/" + post[1] %></p>
-            <% if (post[2].include? "self") || (post[2].include? "default") %>
-              <%= image_tag("aliens/tech.png") %>
-            <% else %>
-              <% if post[4].nil? || post[4].empty? %>
-               <img src=<%= post[2] %>></a>
-              <% else %>
-                <a href=<%= post[4] %>><img src=<%= post[2] %>></a>
-              <% end %>
-            <% end %>
-          </div>
-        <% end %>
-      <% end %>
-	   
-	  </div>
-	  </div>
-  <% end %>
-<% end %>
+</nav>
+<%= render 'subreddit_post' %>
 
 <style>
 #subredditBanner {
