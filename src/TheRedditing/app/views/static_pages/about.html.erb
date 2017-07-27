@@ -1,41 +1,121 @@
 <% provide(:title, "About") %>
-<h1>About</h1>
-<p>
-  This an about section for TheRedditing
-</p>
+<h1 class="title">About</h1>
+
+<section class="section">
+    <div class="body">
+        <div class="image">
+            <img class="img1" src="/assets/about-pic.jpg" alt="" width="600" height="600">
+        </div>
+        <div class="content">
+            <h2 class="title">The Redditing, a perfect place for you to procrastinate and waste time</h2>
+            <ul class="list">
+                <li>
+                    <h2 class="text">More Convenient</h2>
+		            <p class="text">At The Redditing, you are able to choose and view only the content you prefer</p>
+                </li>
+				<br>
+				<br>
+                <li>
+                    <h2 class="text">Deeper Insights</h2>
+					<p class="text">Statistics related to your choice of topics will be provided</p>
+                </li>
+				<br>
+				<br>
+				<li>
+                    <h2 class="text">And more!</font></h2>
+					<p class="text">alfgn lqkrlnt laing lakdnfgl 3kq4n alkdfn lkwneto ienrl k</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<h1 class="title">The Crew</h1>
+<div class="crew"> 
+    <img class="avatar" src="/assets/about-avatar.jpg" width="150" height="150">
+	<span class="name">Martin Minkov</span>
+</div>
+<div class="crew"> 
+    <img class="avatar" src="/assets/about-avatar.jpg" width="150" height="150">
+	<span class="name">William Hosford</span>
+</div>
+<div class="crew"> 
+    <img class="avatar" src="/assets/about-avatar.jpg" width="150" height="150">
+	<span class="name">Henry Chang</span>
+</div>
+<div class="crew"> 
+    <img class="avatar" src="/assets/about-avatar.jpg" width="150" height="150">
+	<span class="name">Kade Chen</span>
+</div>
+<div class="crew"> 
+    <img class="avatar" src="/assets/about-avatar.jpg" width="150" height="150">
+	<span class="name">Daniel Peng</span>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 
 <style>
 
-footer {
-  margin-top: 100px;
-  color: black;
+p.text{
+    color: grey;
+	text-align: left;
 }
 
-footer a {
-  color: black;
+h2.text{
+    color: yellow;
+	font-size: 25px;
+	text-align: left;
+}
+div.crew{
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    width: 220px;
 }
 
-footer a:hover {
-  color: red;
-  transition: 0.3s;
+.name{
+    display: block;
+	color: white;
 }
 
-footer small {
-  float: left;
+.avatar{
+    border-radius: 50%;
 }
 
-footer ul {
-  float: right;
-  list-style: none;
+.img1 {
+    float: left;
 }
 
-footer ul li {
-  float: left;
-  margin-left: 15px;
+h1.title {
+    font-size: 50px;
+	color: white;
 }
 
-hr {
-  border-color: black;
+h2.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+	color: grey;
+	text-align: left;
+}
+
+ul.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-image: url("/assets/about-background.jpg");
+    background-repeat: no-repeat;
 }
 
 </style>
