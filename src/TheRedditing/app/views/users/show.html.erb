@@ -6,16 +6,22 @@
     <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
   </h1>
 </div>
+
+
+<%= render 'subreddit_post' %>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li><%= link_to "Newest Threads", :controller => :users, :action => :showNewPosts %></a></li>
+      <li><%= link_to "Newest Threads", :controller => :users, :action => :showNewPosts %></li>
       <li><%= link_to "Top Threads", :controller => :users, :action => :showTopPosts %></li>
-      <li><%= link_to "Hottest Threads", :controller => :users, :action => :showHotPosts %></a></li>
+      <li><%= link_to "Hottest Threads", :controller => :users, :action => :showHotPosts %></li>
+
     </ul>
   </div>
 </nav>
-<%= render 'subreddit_post' %>
+
+
 
 <style>
 #subredditBanner {
@@ -28,12 +34,28 @@
   padding-top: 0px;
   color: lightblue;
 }
+
 .container{
   background-color: black;
   color: white;
 }
+
 #subredditLogo {
   width: 10%;
   height: auto;
 }
+
+.navbar-nav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 40%;
+  right: 0px;
+  width: 275px;
+  border: 3px solid orange;
+  font-size: 25px;
+  font-family: Courier;
+  font-weight: bold;
+}
+
 </style>

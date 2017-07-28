@@ -1,22 +1,26 @@
 <nav class="navbar navbar-inverse">
   <% @user.subreddits.distinct.pluck(:category).each do |c| %>
-    <nav class="navbar navbar-inverse">
+
     <div class="container-fluid">
+      <br>
       <div class="navbar-header">
         <a class="navbar-brand" href="#"><%= c %></a>
       </div>
     </div>
-    </nav>
+
     <% @user.subreddits.where(category: c).pluck(:subreddit).each do |s| %>
       <div class="media">
       <div class="media-body">
         <% @subredditPost.subredditStructure.each do | key, post | %>
           <% if s.include? post[1] %>
             <div>
-              <p><%= link_to post[0], "https://www.reddit.com" + post[3] %></p>
-              <p><%= link_to post[1], "https://reddit.com/r/" + post[1] %></p>
+
+              <table id="post" >
+                <tr>
+
+            <th>
               <% if (post[2].include? "self") || (post[2].include? "default") || (post[2].empty?) %>
-                <%= image_tag("aliens/tech.png") %>
+                <%= image_tag("nothumb.jpg", :id => "postImg") %>
               <% else %>
                 <% if post[4].nil? || post[4].empty? %>
                  <img src=<%= post[2] %>></a>
@@ -24,6 +28,18 @@
                   <a href=<%= post[4] %>><img src=<%= post[2] %>></a>
                 <% end %>
               <% end %>
+            </th>
+
+            <th>
+              <%= link_to "/r/" + post[1] + ": ", "https://reddit.com/r/" + post[1], :id => "post0" %>
+              <br>
+              <%= link_to post[0], "https://www.reddit.com" + post[3], :id => "post1" %>
+              </th>
+            </tr>
+            </table>
+
+            <hr>
+
             </div>
           <% end %>
         <% end %>
@@ -44,12 +60,60 @@
   padding-top: 0px;
   color: lightblue;
 }
-.container{
-  background-color: black;
-  color: white;
-}
+
 #subredditLogo {
   width: 10%;
   height: auto;
 }
+
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {
+  float:none;
+  font-size: 40px;
+}
+
+.media {
+  background-image: url("/assets/subreddit-bg.jpg");
+  background-size: cover;
+}
+
+
+.table {
+  background-color: #99ccff;
+  color: black;
+  width: 100%;
+}
+
+#post {
+
+}
+
+#post0 {
+  color: orange;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#post0:hover {
+  color: red;
+  transition: 0.3s;
+
+}
+
+#post1 {
+  color: lightgrey;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+hr {
+  border-color: lightblue;
+}
+
 </style>
