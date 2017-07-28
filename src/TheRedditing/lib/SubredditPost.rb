@@ -35,9 +35,6 @@ class SubredditPost
 		end
 		if response.any?
 			new(response)
-		else
-			raise response.response
 		end
 	end
-
 end

@@ -26,8 +26,8 @@ development:
   encoding: unicode
   database: theredditing_development
   pool: 5
-  username: htchang
-  password: 5998616
+  username: martin
+  password: 
 
 
   # The specified database role being used to connect to postgres.
@@ -65,8 +65,8 @@ test:
   encoding: unicode
   database: theredditing_test
   pool: 5
-  username: htchang
-  password: 5998616
+  username: martin
+  password: 
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
