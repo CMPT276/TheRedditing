@@ -20,7 +20,7 @@
 
             <th>
               <% if (post[2].include? "self") || (post[2].include? "default") || (post[2].empty?) %>
-                <%= image_tag("nothumb.jpg", :id => "postImg") %>
+                <%= image_tag("nothumb.png", :id => "postImg") %>
               <% else %>
                 <% if post[4].nil? || post[4].empty? %>
                  <img src=<%= post[2] %>></a>
