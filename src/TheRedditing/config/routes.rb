@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   get    '/preference',   to: 'users#set_preferences'
   get    '/users/:id/showHotPosts', to: 'users#showHotPosts'
-    get    '/users/:id/showTopPosts', to: 'users#showTopPosts'
+  get    '/users/:id/showTopPosts', to: 'users#showTopPosts'
+  get    '/users/:id/showNewPosts', to: 'users#showNewPosts'
 
   resources :users
   resources :subreddits

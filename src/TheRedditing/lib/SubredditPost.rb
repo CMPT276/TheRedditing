@@ -28,10 +28,10 @@ class SubredditPost
 		end
 	end
 
-	def self.getTopPosts(subreddits)
+	def self.getSubredditPosts(subreddits, type)
 		response = []
 		for subreddit in subreddits
-			response.push(get("#{subreddit}/top/.json", headers: {"User-Agent" => APPLICATION_NAME}))
+			response.push(get("#{subreddit}/#{type}/.json", headers: {"User-Agent" => APPLICATION_NAME}))
 		end
 		if response.any?
 			new(response)
@@ -40,15 +40,4 @@ class SubredditPost
 		end
 	end
 
-	def self.getHotPosts(subreddits)
-		response = []
-		for subreddit in subreddits
-			response.push(get("#{subreddit}/hot/.json", headers: {"User-Agent" => APPLICATION_NAME}))
-		end
-		if response.any?
-			new(response)
-		else
-			raise response.response
-		end
-	end
 end
