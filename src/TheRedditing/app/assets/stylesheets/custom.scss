@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url("appbg.png");
+  background-image: image-url("appbg.png");
 }
 
 section {
@@ -38,7 +38,7 @@ textarea {
     z-index: 1; //fix to top
     top: 0;
     left: 0;
-    background-image: url("sidebar/sidebar-bg.jpg");
+    background-image: image-url("sidebar/sidebar-bg.png");
     background-size: cover;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 75px;

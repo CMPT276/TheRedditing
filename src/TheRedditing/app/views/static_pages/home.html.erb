@@ -70,11 +70,14 @@
 
 <br>
 
-<center>
-<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-<br>
-<br>
-</center>
+<% if !logged_in? %>
+  <center>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <br>
+  <br>
+  </center>
+<% end %>
+
 
 <%= render 'layouts/footer' %>
 

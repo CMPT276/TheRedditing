@@ -19,7 +19,6 @@ class UsersController < ApplicationController
      @user = User.find(params[:id])
      @subredditPost = SubredditPost.getSubredditPosts(@user.subreddits.pluck(:subreddit), "top")
      render 'show'
-
   end
 
   def showHotPosts

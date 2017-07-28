@@ -5,7 +5,6 @@
     <%= link_to image_tag("sidebar/sidebar-logo.png"), root_path %>
   </div>
 
-  	<li><%= link_to "<span class=\"glyphicon glyphicon-home\"></span> Home".html_safe, root_path %></li>
 	<% if logged_in? %>
     <li><%= link_to "<span class=\"glyphicon glyphicon-list-alt\"></span> Subreddits".html_safe, current_user %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-book\"></span> Preferences".html_safe, preference_path %></li>
@@ -13,13 +12,15 @@
 		<% if current_user.admin?%>
 			<li><%= link_to "<span class=\"glyphicon glyphicon-list-alt\"></span> Users".html_safe, users_path %></li>
 		<% end %>
+  <% else %>
+    <li><%= link_to "<span class=\"glyphicon glyphicon-home\"></span> Home".html_safe, root_path %></li>
 	<% end %>
 	<% if logged_in? %>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-log-out\"></span> Log out".html_safe, logout_path, method: :delete %></li>
 	<% else %>
+    <li><%= link_to "<span class=\"glyphicon glyphicon-info-sign\"></span> About".html_safe, about_path %></li>
 		<li><%= link_to "<span class=\"glyphicon glyphicon-log-in\"></span> Login".html_safe, login_path %></li>
 	<% end %>
-  <li><%= link_to "<span class=\"glyphicon glyphicon-info-sign\"></span> About".html_safe, about_path %></li>
 
 </div>
 

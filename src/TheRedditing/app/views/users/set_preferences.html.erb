@@ -2,35 +2,38 @@
 
 <h1>Set Preferences</h1>
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <%= simple_form_for(@user) do |f| %>
-        <div class="accordion">
-            <div class="panel-group">
-            <% Subreddit.distinct.pluck(:category).each_with_index do |s, index| %>
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse<%= index.to_s %>"><%= f.label s %><br /></a>
-                    </h4>
-                </div>
-                <div id="collapse<%= index.to_s %>" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <%= f.collection_check_boxes :subreddit_ids, Subreddit.where(category: s), :id, :subreddit do |b| %>
-                            <div class="collection-check-box">
-                                <%= b.check_box %>
-                                <%= b.label %>
-                            </div>
-                        <% end %>
-                    </div>
-              </div>
-              <% end %>
-            </div>
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for(@user) do |f| %>
+    <div class="accordion">
+      <div class="panel-group">
+        <% Subreddit.distinct.pluck(:category).each_with_index do |s, index| %>
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse<%= index.to_s %>"><%= f.label s %><br /></a>
+          </h4>
         </div>
-        <div class="col-md-6 col-md-offset-3">
-           <%= f.submit "Save", class: "btn btn-primary" %>
-       </div>
-       <% end %>
-   </div>
+        <div id="collapse<%= index.to_s %>" class="panel-collapse collapse">
+          <div class="panel-body">
+            <%= f.collection_check_boxes :subreddit_ids, Subreddit.where(category: s), :id, :subreddit do |b| %>
+            <div class="collection-check-box">
+              <%= b.check_box %>
+              <%= b.label %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3" style="padding-bottom: 15px;">
+      <%= f.submit "Save", class: "btn btn-primary" %>  
+    </div>
+    <br>
+    <br>
+    <% end %>
+    </div>
 </div>
+<%= render 'layouts/footer' %>
 
 <style>
 label {
@@ -45,6 +48,7 @@ label {
 .panel-title {
   text-align: center;
   color: lightgrey;
+  font-size: 25px;
 }
 
 .panel-body {
@@ -52,5 +56,8 @@ label {
   color: lightgrey;
 }
 
+.btn {
+  font-size: 20px;
+}
 
 </style>

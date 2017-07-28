@@ -5,28 +5,23 @@
     <u>S U B R E D D I T S</u>
     <img src = "/assets/subreddit-logo.png" id = "subredditLogo">
   </h1>
-</div>
-
-
-<%= render 'subreddit_post' %>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li><%= link_to "Newest Threads", :controller => :users, :action => :showNewPosts %></li>
-      <li><%= link_to "Top Threads", :controller => :users, :action => :showTopPosts %></li>
-      <li><%= link_to "Hottest Threads", :controller => :users, :action => :showHotPosts %></li>
+  <div class="list_table">
+    <ul id="horizontal-list">
+      <li><%= link_to "Newest Posts", :controller => :users, :action => :showNewPosts %> | </li>
+      <li><%= link_to "Top Posts", :controller => :users, :action => :showTopPosts %> | </li>
+      <li><%= link_to "Hottest Posts", :controller => :users, :action => :showHotPosts %></li>
     </ul>
   </div>
-</nav>
+</div>
 
-
+<%= render 'subreddit_post' %>
+<%= render 'layouts/footer' %>
 
 <style>
 #subredditBanner {
   width: 100%;
-  background-image: url("/assets/sidebar-bg.jpg");
-  height: 100px;
+  background: image-url('/assets/sidebar-bg.jpg');
+  height: 200px;
   background-color: purple;
   background-position: fill;
   background-size: cover;
@@ -34,27 +29,32 @@
   color: lightblue;
 }
 
-.container{
-  background-color: black;
-  color: white;
+#subredditBanner h1{
+  margin-bottom: 0px;
 }
 
-#subredditLogo {
-  width: 10%;
-  height: auto;
+.list_table {
+  display: table;   
+  margin: 0 auto;
+  text-align: center;
 }
 
-.navbar-nav {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 40%;
-  right: 0px;
-  width: 275px;
-  border: 3px solid orange;
+ul#horizontal-list {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
   font-size: 25px;
   font-family: Courier;
   font-weight: bold;
+  color: white;
+}
+
+ul#horizontal-list li {
+  display: inline;
+}
+
+ul#horizontal-list li a {
+  color: white;
 }
 
 </style>
