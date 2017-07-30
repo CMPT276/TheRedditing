@@ -30,7 +30,10 @@
                     <% if post[4].nil? || post[4].empty? %>
                     <img src=<%= post[2] %>></a>
                     <% else %>
-                    <a href=<%= post[4] %>><img src=<%= post[2] %>></a>
+                    <%= link_to post[4], target: :_blank, :id => "post4" do %>
+                    	<img src=<%= post[2] %>>
+                    <% end %>
+                    <!-- <a href=<%= post[4] %>><img src=<%= post[2] %>></a> -->
                     <% end %>
                     <% end %>
                   </th>

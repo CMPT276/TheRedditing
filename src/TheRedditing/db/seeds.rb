@@ -75,11 +75,11 @@ Subreddit.create!(subreddit:  "/r/technology",
              category: "Science",
              active: true)
 
-Subreddit.create!(subreddit:  "/r/futurology",
+Subreddit.create!(subreddit:  "/r/Futurology",
              category: "Science",
              active: true)
 
-Subreddit.create!(subreddit:  "/r/AskScience",
+Subreddit.create!(subreddit:  "/r/askscience",
              category: "Science",
              active: true)
 
@@ -131,11 +131,11 @@ Subreddit.create!(subreddit:  "/r/movies",
              category: "Movies",
              active: true)
 
-Subreddit.create!(subreddit:  "/r/moviedetails",
+Subreddit.create!(subreddit:  "/r/MovieDetails",
              category: "Movies",
              active: true)
 
-Subreddit.create!(subreddit:  "/r/documentaries",
+Subreddit.create!(subreddit:  "/r/Documentaries",
              category: "Movies",
              active: true)
 
